@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efd0533aa8d54543abb69ca71cb7122, type: 3}
+  m_Name: 1-5 Dialogue
+  m_EditorClassIdentifier: 
+  names:
+  - Kallen
+  - ???
+  - Kallen
+  - Prince Clovis
+  - Prince Clovis
+  - ???
+  - Prince Clovis
+  - NAME
+  - NAME
+  - Prince Clovis
+  - NAME
+  - NAME
+  charImages:
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  envTags:
+  - C--
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  envImages:
+  - {fileID: 21300000, guid: 771e5322a4fd19143b9bdc85b547a046, type: 3}
+  sentences:
+  - "We\u2019ve captured their commander sir. Apparently he\u2019s quite a big deal,
+    a prince even, according to his words."
+  - Bring him to me, then leave us. I want to talk to him in private.
+  - Yes sir.
+  - So this is the great enemy commander who I lost to.
+  - Well? What does a plebeian like you want with someone like me?
+  - "As prideful as always it seems. Though this does bring back familiar memories
+    doesn\u2019t it Prince Clovis."
+  - Huh? You...who are you?
+  - "It\u2019s been a long time...big brother."
+  - The eldest son of the late Empress Marianne and 6th in line to the Imperial throne.
+    NAME of the Holy Imperial Empire, at your service.
+  - NAME?! But I thought-
+  - That I was dead? I have returned, Your Highness.
+  - To change everything.

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efd0533aa8d54543abb69ca71cb7122, type: 3}
+  m_Name: 1-3 Dialogue
+  m_EditorClassIdentifier: 
+  names:
+  - Enemy Advisor 1
+  - Enemy Advisor 2
+  - Enemy Advisor 3
+  - Prince Clovis
+  - Prince Clovis
+  - Prince Clovis
+  - General Bartley
+  - Prince Clovis
+  - Prince Clovis
+  - General Bartley
+  - ???
+  - ???
+  - Ohgi
+  - ???
+  - ???
+  - ???
+  - Ohgi
+  - Tamaki
+  charImages:
+  - {fileID: 21300000, guid: 967c7b47090d34cf090c40749e45f0b4, type: 3}
+  - {fileID: 21300000, guid: 967c7b47090d34cf090c40749e45f0b4, type: 3}
+  - {fileID: 21300000, guid: 967c7b47090d34cf090c40749e45f0b4, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: 8eacf1322f98adf48bce04e2f37201ed, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: df89923a38836a44693e1a0caa40b5c2, type: 3}
+  - {fileID: 21300000, guid: 8eacf1322f98adf48bce04e2f37201ed, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: 09ea72f6954ac2047988f9f928e6aaca, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: 09ea72f6954ac2047988f9f928e6aaca, type: 3}
+  - {fileID: 21300000, guid: d4372b283a7cde24d8fc5c863e0a577f, type: 3}
+  envTags:
+  - C--
+  - ---
+  - ---
+  - --1
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - CP-
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  envImages:
+  - {fileID: 21300000, guid: 559c4efbdf05d294988e1fd3720c8042, type: 3}
+  - {fileID: 21300000, guid: f7c6420b6618ef14bbc82dc1987482eb, type: 3}
+  sentences:
+  - "Contact lost with Sir Lazlo\u2019s squad!"
+  - Sir Globe and his soldiers are also gone!
+  - Enemies sighted moving towards Point B!
+  - "What on earth is happening?! Could the terrorists have gotten our forces\u2019
+    weaponry?"
+  - "No, but that\u2019s not possible\u2026 Reinforce the gap with the units guarding
+    me."
+  - Send in all our soldiers and finish these rats off!
+  - But Your Highness! If we do that, we risk breaking the encirclement!
+  - I am Prince Clovis, third prince of the Holy Imperial Empire and royal viceroy
+    of this land! I will not let some ignorant terrorists make a fool out of me.
+  - Do what I have commanded! Or do you wish to die too?
+  - ...Yes Your Highness.
+  - "With this enemy Mekka, I can read your army\u2019s every move silly prince."
+  - Another enemy attack incoming! This time from the northwest!
+  - Who are you? At least tell us what your name is.
+  - "I can\u2019t do that. What if these signals are being intercepted?"
+  - Besides, enemy Mekkas will be reaching you within thirty seconds.
+  - Everyone get your weapons and prepare for battle!
+  - ...Fine, do what the voice says people!
+  - Dammit, what else can we do.

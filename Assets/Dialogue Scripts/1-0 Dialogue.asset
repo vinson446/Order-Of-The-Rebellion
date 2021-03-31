@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efd0533aa8d54543abb69ca71cb7122, type: 3}
+  m_Name: 1-0 Dialogue
+  m_EditorClassIdentifier: 
+  names:
+  - Ohgi
+  - Kallen
+  - Kallen
+  - Kallen
+  - Ohgi
+  - Kallen
+  - Kallen
+  charImages:
+  - {fileID: 21300000, guid: 09ea72f6954ac2047988f9f928e6aaca, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: 09ea72f6954ac2047988f9f928e6aaca, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  - {fileID: 21300000, guid: 60974764c37df994c85e4741863edd87, type: 3}
+  envTags:
+  - C--
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  - ---
+  envImages:
+  - {fileID: 21300000, guid: e3941712ae3549040907e55fd3c958d8, type: 3}
+  sentences:
+  - Kallen! How's the enemy Mekka you stole holding up?
+  - "It doesn't have much energy left. I\u2019ll be fine though, I can still play
+    decoy."
+  - 'Ohgi, you get everyone else out of here while I distract them. '
+  - We have to make sure the only ones caught are those of us in the resistance!
+  - "Trust me I know, but they\u2019ve got us completely surrounded!"
+  - "Damned Imperialists\u2026 I\u2019ll buy as much time for y\u2019all as I can."
+  - Now go!

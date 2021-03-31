@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &256515331163337414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3380339188451589828}
+  - component: {fileID: 8796040336485233939}
+  m_Layer: 0
+  m_Name: Power 2 Ally Unit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3380339188451589828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256515331163337414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8796040336485233939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256515331163337414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c1007f3b73d11a46b522a2f82060bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Vinson
+  charFullSprite: {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  charFaceSprite: {fileID: 21300000, guid: 038a534eee3c8ce4185b59e8afd9642a, type: 3}
+  charFaceBodySprite: {fileID: 21300000, guid: 6eda46ee07cefe84db7efc4fcad28ac1, type: 3}
+  type: 0
+  level: 2
+  upgradeLvl: 0
+  exp: 2
+  currentHP: 222
+  maxHP: 2222
+  currentNRG: 22
+  maxNRG: 222
+  ATK: 2
+  DEF: 2
+  ACC: 100
+  EVA: 2
+  CRIT: 2
+  MOV: 2
+  moveSpeed: 12
+  battlePrepSprites:
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  leaderSprite: {fileID: 21300000, guid: 7e5928ac90b72074aa04d6be2e05c2d7, type: 3}
+  skillName:
+  - Power Shot
+  - Power Blast
+  - Judgement
+  skillType:
+  - Attack (Target)
+  - Attack (Target)
+  - Attack (AOE)
+  skillPWR:
+  - 80
+  - 100
+  - 120
+  skillNRG:
+  - 20
+  - 40
+  - 60
+  skillDescript:
+  - Fire a burst shot at a single enemy
+  - Unleash a massive blast attack at a single enemy
+  - Enact judgement by firing upon all enemies in range
