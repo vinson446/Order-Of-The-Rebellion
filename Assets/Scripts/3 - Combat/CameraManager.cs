@@ -100,8 +100,8 @@ public class CameraManager : MonoBehaviour
 
         if (focus1)
         {
-            focusCineCam2.LookAt = unit;
             focusCineCam2.Follow = unit;
+            // focusCineCam2.LookAt = unit;
 
             focus1 = false;
 
@@ -111,8 +111,8 @@ public class CameraManager : MonoBehaviour
         }
         else
         {
-            focusCineCam1.LookAt = unit;
             focusCineCam1.Follow = unit;
+            // focusCineCam1.LookAt = unit;
 
             focus1 = true;
 
@@ -128,7 +128,7 @@ public class CameraManager : MonoBehaviour
         ResetDefaultCam();
 
         defaultCineCam.Follow = FindClosestAvailableAllyUnit();
-        defaultCineCam.LookAt = FindClosestAvailableAllyUnit();
+        // defaultCineCam.LookAt = FindClosestAvailableAllyUnit();
 
         defaultCineCam.gameObject.SetActive(true);
         focusCineCam1.gameObject.SetActive(false);
