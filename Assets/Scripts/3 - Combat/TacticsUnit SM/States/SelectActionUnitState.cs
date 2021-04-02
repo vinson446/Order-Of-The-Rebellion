@@ -116,6 +116,7 @@ public class SelectActionUnitState : TacticsUnitState
     public void Standby()
     {
         uiManager.ResetUI();
+        combatManager.ShowLevelTiles(false);
 
         inputManager.stopInput = false;
 

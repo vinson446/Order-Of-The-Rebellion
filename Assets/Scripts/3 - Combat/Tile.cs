@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [Header("Bool Checks")]
-    [SerializeField] bool isWalkable = true;
+    // public bool isWalkable = true;
     public bool isCurrentlyUsed;
     public bool isTarget;
     public bool isSelectable;
@@ -103,12 +103,12 @@ public class Tile : MonoBehaviour
             // check if there is something on top of the tile for movement
             if (checkColl)
             {
-                if (tile != null && tile.isWalkable)
+                if (tile != null)
                 {
                     RaycastHit hit;
 
                     // if nothing is on top of an adjacent tile, add the tile to the adjacency list
-                    if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 1) || (tile == target))
+                    if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 5) || tile == target)
                     {
                         adjacencyList.Add(tile);
                     }

@@ -42,6 +42,7 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
+        ResetLevelTiles();
         StartPlayerTurn();
     }
 
@@ -213,6 +214,21 @@ public class CombatManager : MonoBehaviour
         foreach (Tile tile in levelTiles)
         {
             tile.Reset();
+        }
+    }
+
+    public void ShowLevelTiles(bool turnOn)
+    {
+        foreach (Tile tile in levelTiles)
+        {
+            if (turnOn)
+            {
+                tile.gameObject.SetActive(true);
+            }
+            else
+            {
+                tile.gameObject.SetActive(false);
+            }
         }
     }
 }

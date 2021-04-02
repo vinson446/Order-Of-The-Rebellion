@@ -28,6 +28,7 @@ public class DefaultUnitState : TacticsUnitState
     public void AllyUnitClick()
     {
         camManager.TurnOnFocusCam(transform.parent);
+        combatManager.ShowLevelTiles(true);
 
         if (combatManager.allyTurn)
         {
