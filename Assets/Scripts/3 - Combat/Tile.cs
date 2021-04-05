@@ -80,18 +80,18 @@ public class Tile : MonoBehaviour
     }
 
     // checkColl is true for moving, false for attacking
-    public void FindNeighbors(Tile target, bool checkColl)
+    public void FindNeighbors(Tile target, bool checkColl, bool attack)
     {
         Reset();
 
-        CheckTile(Vector3.forward, target, checkColl);
-        CheckTile(-Vector3.forward, target, checkColl);
-        CheckTile(Vector3.right, target, checkColl);
-        CheckTile(-Vector3.right, target, checkColl);
+        CheckTile(Vector3.forward, target, checkColl, attack);
+        CheckTile(-Vector3.forward, target, checkColl, attack);
+        CheckTile(Vector3.right, target, checkColl, attack);
+        CheckTile(-Vector3.right, target, checkColl, attack);
     }
 
     // add neighboring, walkable tiles to adjacency list
-    public void CheckTile(Vector3 direction, Tile target, bool checkColl)
+    public void CheckTile(Vector3 direction, Tile target, bool checkColl, bool attack)
     {
         Vector3 halfExtents = new Vector3(0.5f, 1, 0.5f);
         Collider[] colls = Physics.OverlapBox(transform.position + (direction * transform.localScale.x), halfExtents);
@@ -108,9 +108,21 @@ public class Tile : MonoBehaviour
                     RaycastHit hit;
 
                     // if nothing is on top of an adjacent tile, add the tile to the adjacency list
-                    if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 5) || tile == target)
+                    if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, Mathf.Infinity) || tile == target)
                     {
                         adjacencyList.Add(tile);
+                    }
+                    // else if finding units to attack, look for units on top of tiles
+                    else
+                    {
+                        if (attack)
+                        {
+                            if (hit.transform != null)
+                            {
+                                if (hit.transform.GetComponent<TacticsUnit>() != null)
+                                    adjacencyList.Add(tile);
+                            }
+                        }
                     }
                 }
             }

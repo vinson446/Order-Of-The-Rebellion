@@ -22,8 +22,7 @@ public class MovementUnitState : TacticsUnitState
         uiManager.ResetUI();
         uiManager.ShowShortenedUnitInfoPanel(unit);
 
-        if (camManager.isDefault)
-            camManager.TurnOnFocusCam(transform.parent.transform);
+        camManager.TurnOnFocusCam(transform.parent.transform);
 
         tacticsMovement.StartMovePhase();
     }

@@ -29,7 +29,7 @@ public class AllyMovement : TacticsMovement
 
         if (!isMoving)
         {
-            FindSelectableTiles(true, true);
+            FindSelectableTiles(true, true, false);
         }
         else
         {

@@ -61,13 +61,20 @@ public class CombatManager : MonoBehaviour
     {
         List<TacticsUnitSM> allyUnitsToRemove = new List<TacticsUnitSM>();
 
-        for (int i = 0; i < 6; i++)
+        AllyUnit[] allies = FindObjectsOfType<AllyUnit>();
+
+        for (int i = 0; i < allies.Length; i++)
         {
             // set up ally stats if theyre alive, else remove them from allyTeam list
             if (GameManager.instance.units[i].currentHP > 0)
             {
                 AllyUnit unitData = GameManager.instance.units[i];
                 AllyUnit unitInBattle = allyTeam[i].GetComponentInParent<AllyUnit>();
+
+                unitInBattle.Name = unitData.Name;
+                unitInBattle.charFullSprite = unitData.charFullSprite;
+                unitInBattle.charFaceSprite = unitData.charFaceSprite;
+                unitInBattle.charFaceBodySprite = unitData.charFaceBodySprite;
 
                 unitInBattle.maxHP = unitData.maxHP;
                 unitInBattle.currentHP = unitData.currentHP;
@@ -210,15 +217,14 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    /*
     public void ResetLevelTiles()
     {
         foreach (Tile tile in levelTiles)
         {
             tile.Reset();
+            tile.GetComponent<Renderer>().material.color = Color.white;
         }
     }
-    */
 
     public void ShowLevelTiles(bool turnOn)
     {
@@ -234,7 +240,6 @@ public class CombatManager : MonoBehaviour
             }
         }
     }
-
     IEnumerator TurnOffLevelTilesAtStart()
     {
         yield return new WaitForSecondsRealtime(0.1f);

@@ -70,7 +70,8 @@ public class TacticsMovement : MonoBehaviour
     protected void GetCurrentTile()
     {
         currentTile = GetTargetTile(gameObject);
-        currentTile.isCurrentlyUsed = true;
+        if (currentTile != null)
+            currentTile.isCurrentlyUsed = true;
     }
 
     // helper function for GetCurrentTile() and CalculatePath() for enemies
@@ -88,53 +89,57 @@ public class TacticsMovement : MonoBehaviour
     }
 
     // helper function- figure out if a tile is selectable
-    void ComputeAdjacencyList(Tile target, bool checkColl)
+    void ComputeAdjacencyList(Tile target, bool checkColl, bool attack)
     {
         foreach (GameObject tile in tiles)
         {
             Tile t = tile.GetComponent<Tile>();
-            t.FindNeighbors(target, checkColl);
+            t.FindNeighbors(target, checkColl, attack);
         }
     }
 
     // BFS
     // for player and enemy- limit unit's selectable tiles to unit's # of moveSpaces
-    public void FindSelectableTiles(bool showTiles, bool checkColl)
+    public void FindSelectableTiles(bool showTiles, bool checkColl, bool attack)
     {
-        ComputeAdjacencyList(null, checkColl);
+        ComputeAdjacencyList(null, checkColl, attack);
         GetCurrentTile();
 
-        Queue<Tile> process = new Queue<Tile>();
-
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-        // leave currentTile's parent as null
-
-        while (process.Count > 0)
+        if (currentTile != null)
         {
-            Tile t = process.Dequeue();
+            Queue<Tile> process = new Queue<Tile>();
 
-            selectableTiles.Add(t);
+            process.Enqueue(currentTile);
+            if (GetComponent<AllyUnit>() != null)
+                currentTile.visited = true;
+            // leave currentTile's parent as null
 
-            if (showTiles)
+            while (process.Count > 0)
             {
-                if (checkColl)
-                    t.isSelectable = true;
-                else
-                    t.isAttackable = true;
-            }
+                Tile t = process.Dequeue();
 
-            if (t.distance < moveSpaces)
-            {
-                foreach (Tile tile in t.adjacencyList)
+                selectableTiles.Add(t);
+
+                if (showTiles)
                 {
-                    if (!tile.visited)
-                    {
-                        tile.parentTile = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
+                    if (checkColl)
+                        t.isSelectable = true;
+                    else
+                        t.isAttackable = true;
+                }
 
-                        process.Enqueue(tile);
+                if (t.distance < moveSpaces)
+                {
+                    foreach (Tile tile in t.adjacencyList)
+                    {
+                        if (!tile.visited)
+                        {
+                            tile.parentTile = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+
+                            process.Enqueue(tile);
+                        }
                     }
                 }
             }
@@ -146,7 +151,8 @@ public class TacticsMovement : MonoBehaviour
     {
         path.Clear();
 
-        tile.isTarget = true;
+        if (GetComponent<AllyUnit>() != null)
+            tile.isTarget = true;
         isMoving = true;
 
         // start at end location
@@ -162,6 +168,53 @@ public class TacticsMovement : MonoBehaviour
     // for player and enemy
     protected void Move()
     {
+        if (GetComponent<EnemyUnit>() != null)
+        {
+            StartCoroutine(EnemyMovement());
+        }
+        else
+        {
+            if (path.Count > 0)
+            {
+                Tile t = path.Peek();
+                Vector3 target = t.transform.position;
+
+                // calculate unit's position on top of the target tile
+                target.y += halfHeight + t.GetComponent<Collider>().bounds.extents.y;
+
+                if (Vector3.Distance(transform.position, target) >= 0.1f)
+                {
+                    CalculateHeading(target);
+                    SetVelocity();
+
+                    // set dir and then move to tile
+                    transform.forward = heading;
+                    transform.position += velocity * Time.deltaTime;
+                }
+                // reach destination
+                else
+                {
+                    transform.position = target;
+                    path.Pop();
+                }
+            }
+            else
+            {
+                isMoving = false;
+                hasMoved = true;
+
+                EndMovePhase();
+            }
+        }
+    }
+
+    IEnumerator EnemyMovement()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        currentTile.visited = true;
+        actualTargetTile.isTarget = true;
+
         if (path.Count > 0)
         {
             Tile t = path.Peek();
@@ -238,7 +291,7 @@ public class TacticsMovement : MonoBehaviour
     // for enemy
     protected void FindPathForEnemy(Tile target)
     {
-        ComputeAdjacencyList(target, true);
+        ComputeAdjacencyList(target, true, false);
         GetCurrentTile();
 
         List<Tile> unprocessedList = new List<Tile>();

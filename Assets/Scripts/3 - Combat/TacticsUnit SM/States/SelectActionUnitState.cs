@@ -62,9 +62,9 @@ public class SelectActionUnitState : TacticsUnitState
     public void UpdateSelectableTilesForSelectableUnits(bool showTiles)
     {
         if (showTiles)
-            tacticsMovement.FindSelectableTiles(true, false);
+            tacticsMovement.FindSelectableTiles(true, true, true);
         else
-            tacticsMovement.FindSelectableTiles(false, false);
+            tacticsMovement.FindSelectableTiles(false, true, true);
     }
 
     void CheckForEnemiesInAtkRange(bool enemies)
@@ -73,7 +73,7 @@ public class SelectActionUnitState : TacticsUnitState
         {
             RaycastHit hit;
 
-            if (Physics.Raycast(t.transform.position, Vector3.up, out hit, 1))
+            if (Physics.Raycast(t.transform.position, Vector3.up, out hit, Mathf.Infinity))
             {
                 if (enemies)
                 {
@@ -116,9 +116,9 @@ public class SelectActionUnitState : TacticsUnitState
     public void Standby()
     {
         uiManager.ResetUI();
-        combatManager.ShowLevelTiles(false);
 
         inputManager.stopInput = false;
+        combatManager.ShowLevelTiles(false);
 
         DefaultUnitState defaultUnitState = GetComponent<DefaultUnitState>();
         defaultUnitState.finishedTurn = true;
@@ -136,7 +136,7 @@ public class SelectActionUnitState : TacticsUnitState
 
     IEnumerator EnemySelectActionCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
 
         if (selectableUnits.Count > 0)
         {
@@ -144,6 +144,8 @@ public class SelectActionUnitState : TacticsUnitState
         }
         else
         {
+            yield return new WaitForSeconds(1.5f);
+
             Standby();
         }
     }

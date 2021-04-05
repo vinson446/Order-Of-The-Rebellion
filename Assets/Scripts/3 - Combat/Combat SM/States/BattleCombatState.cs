@@ -42,6 +42,9 @@ public class BattleCombatState : CombatState
         int currentAllyHP;
         int targetAllyHP;
 
+        combatManager.ResetLevelTiles();
+        combatManager.ShowLevelTiles(false);
+
         yield return new WaitForSeconds(1);
 
         // player initiated attack
@@ -89,6 +92,7 @@ public class BattleCombatState : CombatState
 
                 uiManager.ShowBattleTotalDmg(false, false, 0);
 
+                // enemy dies to ally attack
                 enemy.currentHP = targetEnemyHP;
             }
             // ally misses enemy
@@ -170,7 +174,7 @@ public class BattleCombatState : CombatState
             // enemy dies to ally's first attack
             else
             {
-                print("2ND ATTACK- Enemy unit died from player initiated attack");
+                print("1ST ATTACK- Enemy unit died from player initiated attack");
                 combatManager.CheckBattleEnd(false, enemy);
             }
         }
@@ -304,7 +308,7 @@ public class BattleCombatState : CombatState
             }
         }
 
-        if (!combatManager.battleComplete)
+        if (!combatManager.battleComplete && ally != null && enemy != null)
             EndBattlePhase();
     }
 

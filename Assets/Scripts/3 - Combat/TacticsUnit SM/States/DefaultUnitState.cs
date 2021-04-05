@@ -34,7 +34,7 @@ public class DefaultUnitState : TacticsUnitState
         {
             if (!finishedTurn)
             {
-                StartCoroutine(GoToMovementCoroutine());
+                stateMachine.ChangeState<MovementUnitState>();
             }
             else
             {
@@ -64,7 +64,9 @@ public class DefaultUnitState : TacticsUnitState
 
     IEnumerator GoToMovementCoroutine()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1.5f);
+
+        combatManager.ShowLevelTiles(true);
 
         stateMachine.ChangeState<MovementUnitState>();
     }

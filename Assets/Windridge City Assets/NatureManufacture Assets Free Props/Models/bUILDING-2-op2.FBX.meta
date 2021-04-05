@@ -1,40 +1,26 @@
 fileFormatVersion: 2
-guid: 00f79bb848bd4ba48872acdddc80826b
+guid: 36e105858a18bdc48b863180fd37234f
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Avalon_Tower
-    100002: Avalon_Tower1
-    100004: Avalon_Tower1_down_geo
-    100006: building-3-A
-    100008: //RootNode
-    100010: building-3-B
-    400000: Avalon_Tower
-    400002: Avalon_Tower1
-    400004: Avalon_Tower1_down_geo
-    400006: building-3-A
-    400008: //RootNode
-    400010: building-3-B
-    2100000: M_brick_1
+    100000: //RootNode
+    400000: //RootNode
+    2100000: M_stone-1
     2100002: M_mullions_graphite
-    2100004: M_metal
+    2100004: M_plaster-1
     2100006: M_glass
-    2100008: M_plaster_1
-    2100010: M_windows_white
-    2300000: building-3-A
-    2300002: building-3-B
-    3300000: building-3-A
-    3300002: building-3-B
-    4300000: building-3-B
-    4300002: building-3-A
-    7400000: Take 001
-    9500000: //RootNode
+    2100008: M_handrail
+    2100010: M_canopy_silver
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BUILDING-003
+    6400000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_brick_1
-    second: {fileID: 2100000, guid: ca672d519a22ddb4da30d75d0b3d50d9, type: 2}
+      name: M_canopy_silver
+    second: {fileID: 2100000, guid: ed46cf23cd4ba7e438618df9b42e1eef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -43,23 +29,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_metal
-    second: {fileID: 2100000, guid: b1f6fdff40737ac4db0df13884e75d11, type: 2}
+      name: M_handrail
+    second: {fileID: 2100000, guid: 30280eb3f7268ca418a349afccd1f960, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_mullions_graphite
-    second: {fileID: 2100000, guid: 79d237bfd3383d744bf4857a26108320, type: 2}
+    second: {fileID: 2100000, guid: 5a98efaf0daeba541ad61253dd2fc373, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_plaster_1
-    second: {fileID: 2100000, guid: ce3e5c94f8c47984f9d122884c156805, type: 2}
+      name: M_plaster-1
+    second: {fileID: 2100000, guid: fab33eaccbd9c5345b3339d15ce8ace2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_windows_white
-    second: {fileID: 2100000, guid: b70e62d915cf8d946a6e99178a9c13cf, type: 2}
+      name: M_stone-1
+    second: {fileID: 2100000, guid: aa14ce28bf094704ba8fdd1324d605df, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -92,7 +78,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -131,7 +117,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0

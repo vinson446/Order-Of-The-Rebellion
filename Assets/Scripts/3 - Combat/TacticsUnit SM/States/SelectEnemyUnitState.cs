@@ -76,12 +76,12 @@ public class SelectEnemyUnitState : TacticsUnitState
         // show selectable enemies in atk range
         selectActionUnitState.UpdateSelectableTilesForSelectableUnits(true);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
 
         uiManager.ShowPrebattleInfoPanel(unit, selectedAlly);
         camManager.TurnOnFocusCam(selectedAlly.transform);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
 
         uiManager.ShowBattleInfoPanel(false);
         selectActionUnitState.UpdateSelectableTilesForSelectableUnits(false);

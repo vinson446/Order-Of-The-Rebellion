@@ -36,9 +36,9 @@ public class EnemyMovement : TacticsMovement
             CalculatePath();
 
             if (CheckToShowSelectableTiles())
-                FindSelectableTiles(true, true);
+                FindSelectableTiles(true, true, false);
 
-            actualTargetTile.isTarget = true;
+            // actualTargetTile.isTarget = true;
         }
         else
         {
