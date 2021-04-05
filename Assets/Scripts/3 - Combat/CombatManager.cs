@@ -42,7 +42,8 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
-        ResetLevelTiles();
+        StartCoroutine(TurnOffLevelTilesAtStart());
+
         StartPlayerTurn();
     }
 
@@ -209,6 +210,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    /*
     public void ResetLevelTiles()
     {
         foreach (Tile tile in levelTiles)
@@ -216,6 +218,7 @@ public class CombatManager : MonoBehaviour
             tile.Reset();
         }
     }
+    */
 
     public void ShowLevelTiles(bool turnOn)
     {
@@ -230,5 +233,12 @@ public class CombatManager : MonoBehaviour
                 tile.gameObject.SetActive(false);
             }
         }
+    }
+
+    IEnumerator TurnOffLevelTilesAtStart()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        ShowLevelTiles(false);
     }
 }

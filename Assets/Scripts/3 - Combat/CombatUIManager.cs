@@ -100,12 +100,15 @@ public class CombatUIManager : MonoBehaviour
     CombatSM combatSM;
     InputManager inputManager;
 
+    private void Awake()
+    {
+        combatSM = FindObjectOfType<CombatSM>();
+        inputManager = FindObjectOfType<InputManager>();
+    }
+
     private void Start()
     {
         ResetUI();
-
-        combatSM = FindObjectOfType<CombatSM>();
-        inputManager = FindObjectOfType<InputManager>();
     }
 
     public void ResetUI()

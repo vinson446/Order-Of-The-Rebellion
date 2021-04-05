@@ -34,7 +34,7 @@ public class DefaultUnitState : TacticsUnitState
         {
             if (!finishedTurn)
             {
-                stateMachine.ChangeState<MovementUnitState>();
+                StartCoroutine(GoToMovementCoroutine());
             }
             else
             {
@@ -64,9 +64,7 @@ public class DefaultUnitState : TacticsUnitState
 
     IEnumerator GoToMovementCoroutine()
     {
-        camManager.TurnOnFocusCam(transform.parent);
-
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
 
         stateMachine.ChangeState<MovementUnitState>();
     }

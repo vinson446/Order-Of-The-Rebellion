@@ -108,18 +108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1169627115007396228
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,18 +227,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &1570020273498391526
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,18 +346,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &2390609836796772773
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,18 +465,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &2487389532953297815
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,18 +584,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &3897036659137806566
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,18 +703,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &4052443578044805886
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,18 +822,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &5178425381571190451
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,18 +941,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &5536009144813708135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,18 +1060,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &5600220435573607992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,18 +1179,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &5857640082359349072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,18 +1298,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &5884518776038046990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,18 +1417,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &6536287627467962785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,18 +1536,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &6538742867741441274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,18 +1655,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &6558122474956427199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,18 +1774,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &7216688182902234518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,18 +1893,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &7782630694372278800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,18 +2012,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &7865434524770227070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,18 +2131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &8715952476250742194
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,18 +2250,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &8830646918472583065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,18 +2369,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86529f2142816a445b81869e5b84da42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalkable: 1
-  IsCurrentlyUsed: 0
-  IsTarget: 0
-  IsSelectable: 0
-  IsPreviewed: 0
+  isCurrentlyUsed: 0
+  isTarget: 0
+  isSelectable: 0
+  isAttackable: 0
   adjacencyList: []
-  Visited: 0
-  ParentTile: {fileID: 0}
-  Distance: 0
-  F: 0
-  G: 0
-  H: 0
+  visited: 0
+  parentTile: {fileID: 0}
+  distance: 0
+  f: 0
+  g: 0
+  h: 0
 --- !u!1 &8891461866435579816
 GameObject:
   m_ObjectHideFlags: 0

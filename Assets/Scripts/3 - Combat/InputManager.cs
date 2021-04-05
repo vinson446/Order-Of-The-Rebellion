@@ -67,7 +67,7 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        combatManager.ResetLevelTiles();
+        // combatManager.ResetLevelTiles();
         combatManager.ShowLevelTiles(false);
 
         combatManager.selectedUnitSM = null;
