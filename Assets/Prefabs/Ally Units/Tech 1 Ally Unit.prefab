@@ -51,8 +51,8 @@ MonoBehaviour:
   level: 5
   upgradeLvl: 0
   exp: 5
-  currentHP: 555
-  maxHP: 5555
+  currentHP: 100000
+  maxHP: 100000
   currentNRG: 55
   maxNRG: 555
   ATK: 5
@@ -60,30 +60,24 @@ MonoBehaviour:
   ACC: 100
   EVA: 5
   CRIT: 5
-  MOV: 5
+  MOV: 6
   moveSpeed: 12
   battlePrepSprites:
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: 6529e435ee9075c42ab059a17b7b870b, type: 3}
+  - {fileID: 21300000, guid: 6529e435ee9075c42ab059a17b7b870b, type: 3}
   leaderSprite: {fileID: 21300000, guid: f47d23c39f065f0469deb9c269160556, type: 3}
   skillName:
   - Reinforce
-  - Reinforce Support
   - Overclock
   skillType:
   - Support (Self)
   - Support (Team)
-  - Support (Team)
   skillPWR:
-  - 100
   - 100
   - '-'
   skillNRG:
-  - 30
-  - 50
-  - 80
+  - 20
+  - 40
   skillDescript:
   - Restores the HP of this unit
-  - Restores the HP of all allies in range
   - Double the ATK and DEF of all allies in range for the next 3 battles

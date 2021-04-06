@@ -51,8 +51,8 @@ MonoBehaviour:
   level: 4
   upgradeLvl: 0
   exp: 4
-  currentHP: 444
-  maxHP: 4444
+  currentHP: 100000
+  maxHP: 100000
   currentNRG: 44
   maxNRG: 444
   ATK: 4
@@ -60,30 +60,24 @@ MonoBehaviour:
   ACC: 100
   EVA: 4
   CRIT: 4
-  MOV: 4
+  MOV: 6
   moveSpeed: 12
   battlePrepSprites:
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: cc2642f53c33f184d9770aa8811dce57, type: 3}
+  - {fileID: 21300000, guid: cc2642f53c33f184d9770aa8811dce57, type: 3}
   leaderSprite: {fileID: 21300000, guid: 7de0017020faa7449845ff321ba1d4f7, type: 3}
   skillName:
   - Keen Focus
-  - Counterattack
   - Assassinate
   skillType:
-  - Support (Self)
   - Support (Self)
   - Attack (Target)
   skillPWR:
   - '-'
-  - '-'
   - 150
   skillNRG:
-  - 20
-  - 35
-  - 50
+  - 10
+  - 30
   skillDescript:
   - Increase ACC and EVA for the next 3 battles
-  - Allow this unit to counterattack (attack twice) during its next battle
   - Barrage a single enemy with bullets at high speeds

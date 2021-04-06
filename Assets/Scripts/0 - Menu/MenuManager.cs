@@ -15,11 +15,19 @@ public class MenuManager : MonoBehaviour
     [SerializeField] Image fadeImage;
     [SerializeField] Button startButton;
     [SerializeField] Button quitButton;
+    [SerializeField] Color hoverColor;
+    [SerializeField] Color defaultColor;
+
+    Image[] startButtonImages;
+    Image[] quitButtonImages;
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.gameState = "Main Menu";
+
+        startButtonImages = startButton.GetComponentsInChildren<Image>(); ;
+        quitButtonImages = quitButton.GetComponentsInChildren<Image>();
 
         ScreenFadeIn(false, initFadeDuration);
     }
@@ -28,6 +36,44 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void HoverButton(int index)
+    {
+        if (index == 0)
+        {
+            foreach (Image i in startButtonImages)
+            {
+                i.color = hoverColor;
+            }
+            foreach (Image i in quitButtonImages)
+            {
+                i.color = defaultColor;
+            }
+        }
+        else if (index == 1)
+        {
+            foreach (Image i in quitButtonImages)
+            {
+                i.color = hoverColor;
+            }
+            foreach (Image i in startButtonImages)
+            {
+                i.color = defaultColor;
+            }
+        }
+    }
+
+    public void DefaultButton()
+    {
+        foreach (Image i in startButtonImages)
+        {
+            i.color = defaultColor;
+        }
+        foreach (Image i in quitButtonImages)
+        {
+            i.color = defaultColor;
+        }
     }
 
     public void StartGame()

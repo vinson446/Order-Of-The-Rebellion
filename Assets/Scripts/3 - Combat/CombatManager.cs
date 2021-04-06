@@ -128,6 +128,7 @@ public class CombatManager : MonoBehaviour
         allyTurn = true;
 
         uiManager.ShowStatePanel("PLAYER TURN", 2, true);
+        camManager.TurnOnDefaultCam();
 
         foreach (TacticsUnitSM unit in allyTeam)
         {
@@ -242,7 +243,7 @@ public class CombatManager : MonoBehaviour
     }
     IEnumerator TurnOffLevelTilesAtStart()
     {
-        yield return new WaitForSecondsRealtime(0.1f);
+        yield return new WaitForSecondsRealtime(0.01f);
 
         ShowLevelTiles(false);
     }

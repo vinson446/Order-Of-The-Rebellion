@@ -4,7 +4,8 @@ using UnityEngine;
 
 public abstract class TacticsSkill : MonoBehaviour
 {
-    [SerializeField] protected bool thirdSkillUnlocked;
+    [SerializeField] protected bool secondSkillUnlocked;
+    public bool SecondSkillUnlocked { get => secondSkillUnlocked; }
 
     TacticsUnit unit;
 
@@ -13,9 +14,9 @@ public abstract class TacticsSkill : MonoBehaviour
         unit = GetComponent<TacticsUnit>();    
     }
 
-    public void UnlockThirdSkill()
+    public void UnlockSecondSkill()
     {
-        thirdSkillUnlocked = true;
+        secondSkillUnlocked = true;
     }
 
     protected abstract void FirstSkill();

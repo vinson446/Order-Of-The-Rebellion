@@ -25,7 +25,6 @@ public class BattlePrepManager : MonoBehaviour
     [SerializeField] Image defaultLdrImage;
     [SerializeField] TextMeshProUGUI defaultNameText;
     [SerializeField] TextMeshProUGUI defaultLvlText;
-    [SerializeField] TextMeshProUGUI defaultTypeText;
 
     [Header("IR - Char Unit Panel")]
     [SerializeField] GameObject[] charUnitPanels;
@@ -135,19 +134,6 @@ public class BattlePrepManager : MonoBehaviour
         defaultLdrImage.sprite = unit.leaderSprite;
         defaultNameText.text = unit.Name;
         defaultLvlText.text = "Lvl " + unit.level.ToString();
-        switch (unit.type)
-        {
-            case TacticsUnit.Type.Power:
-                defaultTypeText.color = Color.red;
-                break;
-            case TacticsUnit.Type.Speed:
-                defaultTypeText.color = Color.blue;
-                break;
-            case TacticsUnit.Type.Tech:
-                defaultTypeText.color = Color.green;
-                break;
-        }
-        defaultTypeText.text = unit.type.ToString();
 
         currentCharIndex = charIndex;
     }
@@ -196,7 +182,6 @@ public class BattlePrepManager : MonoBehaviour
         // rhs
         charButtonSkillsText[0].text = unit.skillName[0];
         charButtonSkillsText[1].text = unit.skillName[1];
-        charButtonSkillsText[2].text = unit.skillName[2];
 
         charUnitPanels[0].SetActive(true);
         charUnitPanels[1].SetActive(false);

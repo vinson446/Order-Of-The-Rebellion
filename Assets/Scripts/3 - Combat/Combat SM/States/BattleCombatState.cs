@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 public class BattleCombatState : CombatState
 {
@@ -45,7 +46,10 @@ public class BattleCombatState : CombatState
         combatManager.ResetLevelTiles();
         combatManager.ShowLevelTiles(false);
 
-        yield return new WaitForSeconds(1);
+        if (playerAtk)
+            camManager.TurnOnBattleCam(ally.transform, enemy.transform);
+        else
+            camManager.TurnOnBattleCam(enemy.transform, ally.transform);
 
         // player initiated attack
         if (playerAtk)
@@ -175,6 +179,8 @@ public class BattleCombatState : CombatState
             else
             {
                 print("1ST ATTACK- Enemy unit died from player initiated attack");
+
+                ally.GetComponent<AllyUnit>().GainExp(enemy.GetComponent<EnemyUnit>().expAmt);
                 combatManager.CheckBattleEnd(false, enemy);
             }
         }
@@ -182,6 +188,8 @@ public class BattleCombatState : CombatState
         // enemy initiated attack
         else
         {
+            camManager.TurnOnBattleCam(enemy.transform, ally.transform);
+
             hitTmp = enemy.ACC / ally.EVA * 100;
 
             // enemy hits ally
@@ -285,6 +293,8 @@ public class BattleCombatState : CombatState
                     if (enemy.currentHP <= 0)
                     {
                         print("2ND ATTACK- Enemy unit died from enemy initiated attack");
+
+                        ally.GetComponent<AllyUnit>().GainExp(enemy.GetComponent<EnemyUnit>().expAmt);
                         combatManager.CheckBattleEnd(false, enemy);
                     }
                 }

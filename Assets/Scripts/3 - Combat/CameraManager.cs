@@ -23,14 +23,13 @@ public class CameraManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera defaultCineCam;
     [SerializeField] CinemachineVirtualCamera focusCineCam1;
     [SerializeField] CinemachineVirtualCamera focusCineCam2;
-    [SerializeField] CinemachineVirtualCamera tmpCam;
+    public CinemachineVirtualCamera targetCineCam;
+    public CinemachineTargetGroup targetGroup;
 
     CombatManager combatManager;
 
     private void Start()
     {
-        TurnOnDefaultCam();
-
         combatManager = FindObjectOfType<CombatManager>();
     }
 
@@ -91,6 +90,7 @@ public class CameraManager : MonoBehaviour
         defaultCineCam.gameObject.SetActive(true);
         focusCineCam1.gameObject.SetActive(false);
         focusCineCam2.gameObject.SetActive(false);
+        targetCineCam.gameObject.SetActive(false);
     }
 
 
@@ -105,9 +105,10 @@ public class CameraManager : MonoBehaviour
 
             focus1 = false;
 
-            defaultCineCam.gameObject.SetActive(false);
-            focusCineCam1.gameObject.SetActive(false);
             focusCineCam2.gameObject.SetActive(true);
+            defaultCineCam.gameObject.SetActive(false);
+            targetCineCam.gameObject.SetActive(false);
+            focusCineCam1.gameObject.SetActive(false);
         }
         else
         {
@@ -116,10 +117,22 @@ public class CameraManager : MonoBehaviour
 
             focus1 = true;
 
-            defaultCineCam.gameObject.SetActive(false);
             focusCineCam1.gameObject.SetActive(true);
+            defaultCineCam.gameObject.SetActive(false);
+            targetCineCam.gameObject.SetActive(false);
             focusCineCam2.gameObject.SetActive(false);
         }
+    }
+
+    public void TurnOnBattleCam(Transform unit1, Transform unit2)
+    {
+        targetGroup.m_Targets[0].target = unit1;
+        targetGroup.m_Targets[1].target = unit2;
+
+        targetCineCam.gameObject.SetActive(true);
+        defaultCineCam.gameObject.SetActive(false);
+        focusCineCam1.gameObject.SetActive(false);
+        focusCineCam2.gameObject.SetActive(false);
     }
 
     // set default cam to look at next available ally unit
@@ -152,6 +165,12 @@ public class CameraManager : MonoBehaviour
         return combatManager.allyTeam[closestIndex].transform.parent.transform;
     }
 
+    void ResetDefaultCam()
+    {
+        defaultCineCam.Follow = null;
+        defaultCineCam.LookAt = null;
+    }
+
     void ResetFocusCam()
     {
         focusCineCam1.LookAt = null;
@@ -160,9 +179,9 @@ public class CameraManager : MonoBehaviour
         focusCineCam2.Follow = null;
     }
 
-    void ResetDefaultCam()
+    void ResetCombatCam()
     {
-        defaultCineCam.Follow = null;
-        defaultCineCam.LookAt = null;
+        targetGroup.m_Targets[0].target = null;
+        targetGroup.m_Targets[1].target = null;
     }
 }

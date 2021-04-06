@@ -15,4 +15,23 @@ public class AllyUnit : TacticsUnit
     public string[] skillNRG;
     [TextArea(5, 50)]
     public string[] skillDescript;
+
+    public void GainExp(int exp)
+    {
+        exp += exp;
+
+        if (exp >= 100)
+        {
+            level += 1;
+            exp -= 100;
+
+            if (level >= 10)
+            {
+                TacticsSkill skill = GetComponent<TacticsSkill>();
+                skill.UnlockSecondSkill();
+
+                upgradeLvl = 1;
+            }
+        }
+    }
 }

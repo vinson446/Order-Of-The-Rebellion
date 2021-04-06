@@ -182,7 +182,7 @@ public class TacticsMovement : MonoBehaviour
                 // calculate unit's position on top of the target tile
                 target.y += halfHeight + t.GetComponent<Collider>().bounds.extents.y;
 
-                if (Vector3.Distance(transform.position, target) >= 0.1f)
+                if (Vector3.Distance(transform.position, target) >= 0.2f)
                 {
                     CalculateHeading(target);
                     SetVelocity();

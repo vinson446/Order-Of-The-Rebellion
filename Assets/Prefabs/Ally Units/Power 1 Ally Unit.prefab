@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1007f3b73d11a46b522a2f82060bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Vinson
+  Name: Thomas
   charFullSprite: {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
   charFaceSprite: {fileID: 21300000, guid: 038a534eee3c8ce4185b59e8afd9642a, type: 3}
   charFaceBodySprite: {fileID: 21300000, guid: 6eda46ee07cefe84db7efc4fcad28ac1, type: 3}
@@ -51,8 +51,8 @@ MonoBehaviour:
   level: 1
   upgradeLvl: 0
   exp: 1
-  currentHP: 0
-  maxHP: 1111
+  currentHP: 100000
+  maxHP: 100000
   currentNRG: 11
   maxNRG: 111
   ATK: 1
@@ -60,30 +60,24 @@ MonoBehaviour:
   ACC: 100
   EVA: 1
   CRIT: 1
-  MOV: 1
+  MOV: 6
   moveSpeed: 12
   battlePrepSprites:
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
-  - {fileID: 21300000, guid: a421914c017c6c8458013ee7dcec4233, type: 3}
+  - {fileID: 21300000, guid: db19e6a43c5d0ca48b9b1d64f24ba767, type: 3}
+  - {fileID: 21300000, guid: db19e6a43c5d0ca48b9b1d64f24ba767, type: 3}
   leaderSprite: {fileID: 21300000, guid: 7e5928ac90b72074aa04d6be2e05c2d7, type: 3}
   skillName:
   - Power Shot
-  - Power Blast
   - Judgement
   skillType:
   - Attack (Target)
-  - Attack (Target)
   - Attack (AOE)
   skillPWR:
-  - 80
-  - 100
   - 120
+  - 100
   skillNRG:
-  - 20
-  - 40
-  - 60
+  - 30
+  - 50
   skillDescript:
   - Fire a burst shot at a single enemy
-  - Unleash a massive blast attack at a single enemy
   - Enact judgement by firing upon all enemies in range

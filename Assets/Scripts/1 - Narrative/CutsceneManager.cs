@@ -51,7 +51,7 @@ public class CutsceneManager : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        print(slide + " " + Mathf.RoundToInt(time));
+        // print(slide + " " + Mathf.RoundToInt(time));
     }
 
     public void StartPrologueCutscene()
